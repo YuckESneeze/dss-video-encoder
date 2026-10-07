@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: dss-video-encoder
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: MAX_SECONDS
+        value: "1800"
